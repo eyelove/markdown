@@ -24,6 +24,7 @@ Table of Contents
 1. 계정을 생성합니다
 2. Inventory -> New App을 선택합니다.
 ![new app](./img/sdk-1.png)
+
 3. 앱정보를 등록한후, unit을 생성 합니다.
 
 ## SDK 적용하기
@@ -52,6 +53,7 @@ android:value="@integer/google_play_services_version" />  
 
 poject structure -> dependencies -> add -> library dependency 에서 com.google.android.gms:play-services or com.google.android.gms:play-services-ads를 추가합니다
 ![import](./img/sdk-3.png)
+
 _* eclipse를 사용하는 경우에는 Google Play Service 라이브러리 프로젝트를 추가합니다._
 
 ### 프로가드 설정
