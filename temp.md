@@ -118,46 +118,46 @@ com.onnuridmc.exelbid.common.ExelBidActivity를 AndroidManafest.xml의 <applicat
 띠 배너 형태의 광고를 사용합니다.
 
 1.  배너 광고 인스턴스를 원하는 layout위치에다가 생성합니다.
-```xml
-<com.onnuridmc.exelbid.ExelBidAdView  
-     android:id="@+id/adview"  
-     android:layout_width="match_parent"  
-     android:layout_height="wrap_content">  
-</com.onnuridmc.exelbid.ExelBidAdView>  
-```
+  ```xml
+  <com.onnuridmc.exelbid.ExelBidAdView  
+       android:id="@+id/adview"  
+       android:layout_width="match_parent"  
+       android:layout_height="wrap_content">  
+  </com.onnuridmc.exelbid.ExelBidAdView>  
+  ```
 
 2. Activity에서 해당 인스턴스를 바인딩 합니다.
-```java
-ExelBidAdView mAdView = (ExelBidAdView) findViewById(R.id.adview); 
-```
+  ```java
+  ExelBidAdView mAdView = (ExelBidAdView) findViewById(R.id.adview); 
+  ```
 
 3. 사이트로부터 발급받은 유닛 아이디를 확인합니다
-![unit id](./img/sdk-4.png)
+  ![unit id](./img/sdk-4.png)
 
 4. 유닛아이디를 배너 인스턴스에 셋팅합니다.
-```java
-setAdUnitId(String)
-```
+  ```java
+  setAdUnitId(String)
+  ```
 
 5. 광고를 요청합니다.
-```java
-loadAd()
-```
+  ```java
+  loadAd()
+  ```
 
 6. 광고 이벤트 등록
-* ``setAdListener(OnBannerAdListener)``
-  - ``onAdLoaded()`` : 광고가 로딩된 시점에 호출 됩니다.
-  -	``onAdFailed(ExelBidError)`` : 서버로부터 광고를 가져오지 못한 경우에 호출 됩니다.
+  * ``setAdListener(OnBannerAdListener)``
+    - ``onAdLoaded()`` : 광고가 로딩된 시점에 호출 됩니다.
+    -	``onAdFailed(ExelBidError)`` : 서버로부터 광고를 가져오지 못한 경우에 호출 됩니다.
 
 7. 기본적으로 띠배너의 광고의 경우 유닛에 설정한 리플래쉬 시간에 따라 자동으로 갱신 됩니다. 해당 기능을 사용하지 않게 하기 위해서는 리플래쉬 기능을 해제해 주어야 합니다.
-```java
-setAutorelashDisable()
-```
+  ```java
+  setAutorelashDisable()
+  ```
 
 8. 엑티비티 종료시 destroy를 호출합니다.
-```java
-destroy()
-```
+  ```java
+  destroy()
+  ```
 
 ### 전면 광고
 
