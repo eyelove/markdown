@@ -21,20 +21,26 @@ Table of Contents
 
 ## 시작하기
 
-## SDK 적용하기
-
 1. 계정을 생성합니다
 2. Inventory -> New App을 선택합니다.
+![new app](./img/sdk-1.png)
 3. 앱정보를 등록한후, unit을 생성 합니다.
 
-## 어플리케이션 설정
+## SDK 적용하기
 
+1. 홈페이지에서 SDK를 다운로드 받습니다.
+2. espresso-sdk.jar를 복사하여 프로젝트의 /libs폴더에 저장합니다.
+3. android studio의 경우 poject structure -> dependencies -> add -> file dependency에서 espresso-sdk.jar를 선택하여 추가합니다.
+![sdk dependencies](./img/sdk-2.png)
+
+
+## 어플리케이션 설정
 
 ### 라이브러리 추가
 
 ExelBid Android SDK가 제대로 작동하려면 Google Play Service 4.0 이상의 라이브러리가 필요합니다. 광고 식별자 수집에 대한 Google Play 콘텐츠 가이드라인을 준수하기 위한 것입니다.
 
-##### 1. AndroidManifest.xml파일에 <application> 태그 안에 아래 코드를 추가합니다.
+##### 1. ``AndroidManifest.xml``파일에 <application> 태그 안에 아래 코드를 추가합니다.
 
 ```xml
 <meta-data  
@@ -45,7 +51,7 @@ android:value="@integer/google_play_services_version" />  
 ##### 2. Google Play Service jar를 dependencies에 추가합니다.
 
 poject structure -> dependencies -> add -> library dependency 에서 com.google.android.gms:play-services or com.google.android.gms:play-services-ads를 추가합니다
-
+![import](./img/sdk-3.png)
 _* eclipse를 사용하는 경우에는 Google Play Service 라이브러리 프로젝트를 추가합니다._
 
 ### 프로가드 설정
@@ -124,6 +130,8 @@ ExelBidAdView mAdView = (ExelBidAdView) findViewById(R.id.adview); 
 ```
 
 3. 사이트로부터 발급받은 유닛 아이디를 확인합니다
+![unit id](./img/sdk-4.png)
+
 4. 유닛아이디를 배너 인스턴스에 셋팅합니다.
 ```java
 setAdUnitId(String)
